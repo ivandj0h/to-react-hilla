@@ -24,10 +24,10 @@ export function TodoView() {
         }
     }
 
-    async function updateTodo(todo:Todo , done: boolean) {
-       const saved = await TodoEndpoint.updateTodoDone({
-           ...todo, done
-       });
+    async function updateTodo(todo: Todo, done: boolean) {
+        const saved = await TodoEndpoint.updateTodoDone({
+            ...todo, done
+        });
         if (saved) {
             setTodos(todos.map(t => t.id === todo.id ? saved : t))
         }
@@ -36,7 +36,8 @@ export function TodoView() {
 
     return (
         <div className="p-m">
-            <h3>Te React Hilla - TodoApp</h3>
+            <h3>To React Hilla - TodoApp</h3>
+            <small>Simple TodoApp using Spring Boot, Hilla & React</small>
             <div className="flex gap-m">
                 <TextField value={task} onChange={e => setTask(e.target.value)}/>
                 <Button theme="primary" onClick={addTodo}>Add Todo</Button>
@@ -44,7 +45,7 @@ export function TodoView() {
 
             {todos.map(todo => (
                 <div key={todo.id}>
-                    <Checkbox checked={todo.done} onCheckedChanged={e => updateTodo(todo, e.target.value)} />
+                    <Checkbox checked={todo.done} onCheckedChanged={e => updateTodo(todo, e.detail.value)}/>
                     <span>{todo.task}</span>
                 </div>
             ))}
