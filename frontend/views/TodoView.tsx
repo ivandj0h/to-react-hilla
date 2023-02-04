@@ -44,7 +44,7 @@ export function TodoView() {
 
             {todos.map(todo => (
                 <div key={todo.id}>
-                    <Checkbox checked={todo.done} onCheckedChanged={e => updateTodo(todo, e.target.value)} />
+                    <Checkbox checked={todo.done} onCheckedChanged={e => updateTodo(todo, e.detail.value)} />
                     <span>{todo.task}</span>
                 </div>
             ))}
