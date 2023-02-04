@@ -25,9 +25,7 @@ public class TodoEndpoint {
         return repository.save(new Todo(task));
     }
 
-    public Todo updateTodoDone(Long id, boolean done) {
-        Todo todo = repository.findById(id).orElseThrow();
-        todo.setDone(done);
+    public Todo updateTodoDone(Todo todo) {
         return repository.save(todo);
     }
 }
