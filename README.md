@@ -1,6 +1,6 @@
-# Custom project from Hilla
+# To react Hilla Application
 
-This project can be used as a starting point to create your own Hilla application with Spring Boot.
+This project can be used as a starting point to create `Hilla application` with `Spring Boot`.
 It contains all the necessary configuration and some placeholder files to get you started.
 
 ## Running the application
@@ -43,9 +43,3 @@ CSS styles</td></tr>
 source directory, contains the server-side Java views</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>Application.java</code></td><td>Server entry-point</td></tr>
 </table>
-
-## Useful links
-
-- Read the documentation at [hilla.dev/docs](https://hilla.dev/docs/).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/hilla) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
-- Report issues, create pull requests in [GitHub](https://github.com/vaadin/hilla).
